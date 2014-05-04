@@ -47,3 +47,4 @@ Address.belongsTo(User, {as: 'user', foreignKey: 'userId'});
 User.hasAndBelongsToMany('preferences');
 
 Role.hasMany(User, {as: 'users', foreignKey: 'roleId'});
+User.belongsTo(Role, {as: 'role', foreignKey: 'roleId'});

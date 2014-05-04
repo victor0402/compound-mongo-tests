@@ -9,7 +9,7 @@
 		"express": "~3.x",
 		"compound": ">= 1.1.0",
 		"jugglingdb": ">= 0.1.0",
-		"jugglingdb-mongodb": ">= 0",
+		"jugglingdb-mongodb": "jugglingdb/mongodb-adapter",
 		"coffee-script": ">= 1.1.1",
 		"stylus": "latest",
 		"seedjs": "latest",
@@ -21,10 +21,12 @@
 		"supertest": ">= 0",
 		"mocha": ">= 0",
 		"should": ">= 0",
+		"chai": "^1.9.1",
 		"semicov": "*",
-		"co-generators": "*"
+		"co-generators": "*",
+		"database-cleaner": "^0.7.0"
 	},
 	"scripts": {
-		"test": "./node_modules/.bin/mocha --require test/init.js test/*/*.test.js"
+		"test": "NODE_ENV=test mocha"
 	}
 }
